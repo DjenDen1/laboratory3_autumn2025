@@ -1,0 +1,86 @@
+name: CICD
+
+on: 
+  push:
+    branches:
+      - main
+
+permisissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Clean build directory
+        run: |
+          if (Test-Path build) {
+            Remove-Item -Recurse -Force build
+          }
+
+      - name: Configure Cmake
+        run: cmake -S . -B build
+
+      - name: Build with cmake
+        run: cmake --build build --config Release
+
+      - name: Upload Windows Artifacts
+        uses: actions/upload-artifact@v4
+  
+  build-linux:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Clean build directory
+        uses: rm -rf build
+
+      - name: Install dependencies
+        uses: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential cmake
+      
+      - name: Configure CMake
+        run: cmake -S . -B build
+      
+      - name: Build project
+        run: cmake --build build --config Release
+      
+      - name: Build project
+        run: cmake --build build --config Release
+      
+      - name: Upload Linux artificats
+        uses: actions/upload-artifact@v4
+
+  create-release:
+    need: [build-windows , build-linux]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download Windows Artifacts
+        uses: actions/download-artifact@v4
+
+      - name: Download Linux Artifacts
+        uses: actions/download-artifact@v4
+
+      - name: Create Release and Upload Assets
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ github.run_number }}
+          name: Release v${{ github.run_number }} 
+          draft: false
+          prerelease: false
+          files: |
+           laboratory3.exe 
+           laboratoy3
+          
+          body:  |
+           Laboratory 3 Release v${{ github.run_number }}
+

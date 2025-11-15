@@ -1,0 +1,32 @@
+[
+{
+  "directory": "C:/CPP2025/lab3/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -o CMakeFiles\\laboratory3.dir\\main.cpp.obj -c C:\\CPP2025\\lab3\\main.cpp",
+  "file": "C:/CPP2025/lab3/main.cpp",
+  "output": "C:/CPP2025/lab3/build/CMakeFiles/laboratory3.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/CPP2025/lab3/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -o CMakeFiles\\laboratory3.dir\\voidprint.cpp.obj -c C:\\CPP2025\\lab3\\voidprint.cpp",
+  "file": "C:/CPP2025/lab3/voidprint.cpp",
+  "output": "C:/CPP2025/lab3/build/CMakeFiles/laboratory3.dir/voidprint.cpp.obj"
+},
+{
+  "directory": "C:/CPP2025/lab3/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -o CMakeFiles\\laboratory3.dir\\elementdoublelinkedlist.cpp.obj -c C:\\CPP2025\\lab3\\elementdoublelinkedlist.cpp",
+  "file": "C:/CPP2025/lab3/elementdoublelinkedlist.cpp",
+  "output": "C:/CPP2025/lab3/build/CMakeFiles/laboratory3.dir/elementdoublelinkedlist.cpp.obj"
+},
+{
+  "directory": "C:/CPP2025/lab3/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -o CMakeFiles\\laboratory3.dir\\elementmonolinkedlist.cpp.obj -c C:\\CPP2025\\lab3\\elementmonolinkedlist.cpp",
+  "file": "C:/CPP2025/lab3/elementmonolinkedlist.cpp",
+  "output": "C:/CPP2025/lab3/build/CMakeFiles/laboratory3.dir/elementmonolinkedlist.cpp.obj"
+},
+{
+  "directory": "C:/CPP2025/lab3/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -o CMakeFiles\\laboratory3.dir\\functions.cpp.obj -c C:\\CPP2025\\lab3\\functions.cpp",
+  "file": "C:/CPP2025/lab3/functions.cpp",
+  "output": "C:/CPP2025/lab3/build/CMakeFiles/laboratory3.dir/functions.cpp.obj"
+}
+]
