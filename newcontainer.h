@@ -42,6 +42,7 @@ class LargeNEWcontainer
         data[size++] = value;
     }
 
+
     class iterator {
         uniqtype* ptr;
 
@@ -90,4 +91,4 @@ class LargeNEWcontainer
 };
 
 
-#endif
+#endif 

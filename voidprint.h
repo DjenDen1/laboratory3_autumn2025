@@ -6,4 +6,6 @@
 std::string prinl();
 std::string prinequal();
 std::string princhain();
+void printin_triple_block();
+void printin_double_block();
 #endif

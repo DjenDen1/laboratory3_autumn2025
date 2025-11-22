@@ -5,16 +5,18 @@
 #include "containers.h"
 #include <iostream>
 
+#include <cstdlib>
 #include <list>
 #include <vector>
 #include <forward_list>
 #include <deque>
-
+#include <ctime>
 
 
 int main()
 {
    
+    std::srand(std::time(nullptr));
 
     containers();
         
@@ -98,7 +100,21 @@ std::cout << "BINdouble: "  << exp->doubleBIN << std::endl;
 */
 
    
-    intelectual_print(double_linked_list,mono_linked_list);        
+       
+    
+    LargeNEWcontainer<int> newcontainer;
+
+    for(size_t index = 0; index < 10 ; index++)
+    {
+       newcontainer.push_back((std::rand() % 100) + 22);
+    }
+
+    std::cout << "Capacity: " << newcontainer.getCapacity() << std::endl;
+    std::cout << "Size: " << newcontainer.getsize() << std::endl;
+
+
+    intelectual_print(double_linked_list,mono_linked_list); 
+
 
     return 0;
 }
