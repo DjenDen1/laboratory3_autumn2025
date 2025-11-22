@@ -11,11 +11,13 @@
 #include <forward_list>
 #include <deque>
 #include <ctime>
+#include <locale>
+
 
 
 int main()
 {
-   
+   setlocale(LC_ALL, "ru-RU.UTF-8");
     std::srand(std::time(nullptr));
 
     containers();

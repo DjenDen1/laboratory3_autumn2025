@@ -1,6 +1,6 @@
 # ninja log v7
-40	872	7854690032935093	CMakeFiles/laboratory3.dir/main.cpp.obj	a8b23db896bae8bf
-872	1008	7854690041266498	laboratory3.exe	82af4126ce034f37
+41	895	7855046308553421	CMakeFiles/laboratory3.dir/main.cpp.obj	a8b23db896bae8bf
+896	1000	7855046317095142	laboratory3.exe	82af4126ce034f37
 10	339	7854571920844164	CMakeFiles/laboratory3.dir/voidprint.cpp.obj	3d18e7a8813d5f77
 38	813	7847617811899964	CMakeFiles/laboratory3.dir/elementdoublelinkedlist.cpp.obj	b7752bc041eacb35
 14	519	7854571920884804	CMakeFiles/laboratory3.dir/functions.cpp.obj	c2d003b76f7be093
