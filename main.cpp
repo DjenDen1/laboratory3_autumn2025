@@ -111,11 +111,19 @@ std::cout << "BINdouble: "  << exp->doubleBIN << std::endl;
        newcontainer.push_back((std::rand() % 100) + 22);
     }
 
-    std::cout << "Capacity: " << newcontainer.getCapacity() << std::endl;
-    std::cout << "Size: " << newcontainer.getsize() << std::endl;
+    std::cout << "ОБьем: " << newcontainer.getCapacity() << std::endl;
+    std::cout << "Размер: " << newcontainer.getsize() << std::endl;
+
+    LargeNEWcontainer<int>::iterator larit = newcontainer.begin();
+    LargeNEWcontainer<int>::iterator larend = newcontainer.end();
+    std::cout << *larit << " " << *larend << std::endl;
+    ++larit;
+    std::cout << "Сементика перемещения  " << std::endl;
+    std::cout << *larit << " " <<*larend <<std::endl;
 
 
-    intelectual_print(double_linked_list,mono_linked_list); 
+
+    intelectual_print(double_linked_list,mono_linked_list);
 
 
     return 0;
