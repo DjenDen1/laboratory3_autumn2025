@@ -179,7 +179,9 @@ int main()
         std::cout <<it_list8 ->double_number <<" ";
         ++it_list8;
     }
+    std::cout << std::endl;
     
+    std::cout << "propert_consistent_container consistent1;" << std::endl;
 
     propert_consistent_container consistent1;
 
@@ -187,6 +189,9 @@ int main()
     {
         consistent1.push_back(index);
     }
+
+    std::cout << std::endl;
+
     for(size_t index =0; index < consistent1.getsize(); index++)
     {
         std::cout << consistent1[index].double_number << " ";
@@ -195,7 +200,23 @@ int main()
     consistent1.erase(4);
     consistent1.erase(6);
     
+    std::cout << std::endl;
+
+    for(size_t index =0; index < consistent1.getsize(); index++)
+    {
+        std::cout << consistent1[index].double_number << " ";
+    }
     
+    consistent1.sp_push_front(10);
+    consistent1.sp_insert(consistent1.getsize()/2,20);
+    consistent1.sp_insert(consistent1.getsize(),30);
+
+    std::cout << std::endl;
+
+    for(size_t index =0; index < consistent1.getsize(); index++)
+    {
+        std::cout << consistent1[index].double_number << " ";
+    }
     return 0;
 
 }
