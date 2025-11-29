@@ -42,9 +42,25 @@ class propert_consistent_container
             integerBIN = transfor_BIN_CE(integer_number);
             doubleBIN  = transfor_BIN_double_CE(double_number);
 
-            
+          
 
         }
+
+        unsigned long int size_structLE()
+        {
+            auto all_size = sizeof(double_number) 
+                          + sizeof(doubleBIN)
+                          + sizeof(doubleHEX) 
+                          + sizeof(floater_number) 
+                          + sizeof(integer_number)
+                          + sizeof(integer_number_fractional_part)
+                          + sizeof(integerBIN)
+                          + sizeof(integerHEX)
+                          + sizeof(unsign_number);
+            return all_size;
+        }
+        
+    
 
     };
     CE* data;
@@ -96,6 +112,13 @@ class propert_consistent_container
         data =new_data;
         capacity_container = new_capacity;
 
+    }
+
+    int size_bytes()
+    {
+        int all_size = 0;
+        for(size_t index = 0; index < size_container; index++) all_size+=data[index].size_structLE();
+        return all_size;
     }
 
     void increment_grow()
