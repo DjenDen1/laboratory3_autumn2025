@@ -15,6 +15,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       
+      - name: Setup modern MSVC
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+
       - name: Clean build directory
         run: |
           if (Test-Path build) {
@@ -22,7 +27,7 @@ jobs:
           }
 
       - name: Configure CMake
-        run: cmake -S . -B build
+        run: cmake -S . -B build -DCMAKE_CXX_STANDARD=14
 
       - name: Build with CMake
         run: cmake --build build --config Release
@@ -42,13 +47,16 @@ jobs:
       - name: Clean build directory
         run: rm -rf build
 
-      - name: Install dependencies
+      - name: Install modern CMake and compiler
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential cmake
+          sudo apt-get install -y build-essential cmake g++-11
       
-      - name: Configure CMake
-        run: cmake -S . -B build
+      - name: Configure CMake with C++14
+        run: |
+          cmake -S . -B build \
+            -DCMAKE_CXX_STANDARD=14 \
+            -DCMAKE_CXX_COMPILER=g++-11
       
       - name: Build project
         run: cmake --build build --config Release
@@ -88,3 +96,4 @@ jobs:
             linux-artifact/laboratory3
           body: |
             Laboratory 3 Release v${{ github.run_number }}
+            Built with C++14 standard
