@@ -65,7 +65,7 @@ class LargeNEWcontainer
         
     uniqtype& operator[](size_t index)
     {
-        if(index >= size) throw std::out_of_range("Index out of range");
+        if(index >= size) throw std::out_of_range("Index out");
     
         return data[index];
     }

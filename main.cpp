@@ -5,6 +5,9 @@
 #include "containers.h"
 #include <iostream>
 
+#include "list_type_container.h"
+#include "consistent_container.h"
+
 #include <cstdlib>
 #include <list>
 #include <vector>
@@ -14,13 +17,14 @@
 #include <locale>
 
 
+/*
 
 int main()
 {
    setlocale(LC_ALL, "ru-RU.UTF-8");
     std::srand(std::time(nullptr));
 
-    containers();
+    //containers();
         
     std::cout << prinl() << " работа с двунапавленный контейнером " << prinl() << std::endl;
 
@@ -48,24 +52,23 @@ while(it != double_linked_list.end())
     auto next_it = std::next(it);
     auto prev_it = (it == double_linked_list.begin()) ? double_linked_list.end() : std::prev(it);
     
-    // Устанавливаем правый указатель (на следующий элемент)
+    
     if(next_it != double_linked_list.end())
     {
-        (*it)->right_forward_ptr = *next_it; // Есть следующий элемент
+        (*it)->right_forward_ptr = *next_it; 
     }
     else
     {
-        (*it)->right_forward_ptr = nullptr; // Это последний элемент
+        (*it)->right_forward_ptr = nullptr; 
     }
     
-    // Устанавливаем левый указатель (на предыдущий элемент)
     if(it != double_linked_list.begin())
     {
-        (*it)->left_back_ptr = *prev_it; // Есть предыдущий элемент
+        (*it)->left_back_ptr = *prev_it;  
     }
     else
     {
-        (*it)->left_back_ptr = nullptr; // Это первый элемент
+        (*it)->left_back_ptr = nullptr;
     }
     
     ++it;
@@ -88,43 +91,111 @@ while(it_mono != mono_linked_list.end())
     ++it_mono;
     
 }
-   
-/*
-DLLE* exp = new DLLE(8000.032323);
-  
-std::cout << "Double: " << exp->double_number << std::endl;
-std::cout << "Integer: " << exp->integer_number << std::endl;
-std::cout << "Fractional: " << exp->intger_number_fractional_part << std::endl;
-std::cout << "Integer HEX: " << exp->integerHEX << std::endl;
-std::cout << "Double HEX: " << exp->doubleHEX << std::endl;
-std::cout << "integerBIN: " << exp->integerBIN << std::endl;
-std::cout << "BINdouble: "  << exp->doubleBIN << std::endl;
+
+
+   propert_consistent_container container1;
+   for(int index = 0; index < 20; index++)
+   {
+      container1.push_back(index*1.2439498599994955);
+   }
+
+   propert_list_type_container container2;
+   // propert_list_type_container::list_type_iterator it_list = container2.begin(); - оказалось что итератор статический и он будет указывать на тот самый участок памяти, который пустой
+   for(int index = 0; index < 20; index++)
+   {
+    container2.push_back(index);
+   }
+
+   int count =0;
+   propert_list_type_container::list_type_iterator it_list = container2.begin();
+
+   std::cout << std::endl;
+   std::cout << std::endl;
+   std::cout << it_list->size_structLE();
+    return 0;}
+    
 */
 
-   
-       
-    
-    LargeNEWcontainer<int> newcontainer;
 
-    for(size_t index = 0; index < 10 ; index++)
+int main()
+{
+    propert_list_type_container list1;
+    std::cout << "propert_list_type_container list1;" << std::endl;
+    for(size_t index=0; index < 10; index++)
     {
-       newcontainer.push_back((std::rand() % 100) + 22);
+        list1.push_back(index);
+    }
+    propert_list_type_container::list_type_iterator it_list1 = list1.begin();
+    while(it_list1 != list1.end())
+    {
+        std::cout <<it_list1 ->double_number <<" ";
+        ++it_list1;
+    }
+    std::cout << std::endl;
+    list1.erase(2);
+    list1.erase(4);
+    list1.erase(6);
+    propert_list_type_container::list_type_iterator it_list2 = list1.begin();
+    while(it_list2 != list1.end())
+    {
+        std::cout <<it_list2 ->double_number <<" ";
+        ++it_list2;
+    }
+    std::cout << std::endl;
+    propert_list_type_container::list_type_iterator it_list3 = list1.begin();
+    
+    list1.insert(it_list3,10);
+
+        propert_list_type_container::list_type_iterator it_list4 = list1.begin();
+    while(it_list4 != list1.end())
+    {
+        std::cout <<it_list4 ->double_number <<" ";
+        ++it_list4;
     }
 
-    std::cout << "ОБьем: " << newcontainer.getCapacity() << std::endl;
-    std::cout << "Размер: " << newcontainer.getsize() << std::endl;
 
-    LargeNEWcontainer<int>::iterator larit = newcontainer.begin();
-    LargeNEWcontainer<int>::iterator larend = newcontainer.end();
-    std::cout << *larit << " " << *larend << std::endl;
-    ++larit;
-    std::cout << "Сементика перемещения  " << std::endl;
-    std::cout << *larit << " " <<*larend <<std::endl;
+    propert_list_type_container::list_type_iterator it_list5 = list1.begin();
+    size_t mid_index = list1.size()/2;
+    for(size_t index = 0; index < mid_index; index++) ++it_list5;
+    list1.insert(it_list5,20);
 
+    std::cout << std::endl;
 
+    propert_list_type_container::list_type_iterator it_list6 = list1.begin();
+    while(it_list6 != list1.end())
+    {
+        std::cout <<it_list6 ->double_number <<" ";
+        ++it_list6;
+    }
+    
+    std::cout << std::endl;
 
-    intelectual_print(double_linked_list,mono_linked_list);
+    propert_list_type_container::list_type_iterator it_list7 = list1.end();
+    list1.insert(it_list7,30);
 
+     propert_list_type_container::list_type_iterator it_list8 = list1.begin();
+    while(it_list8 != list1.end())
+    {
+        std::cout <<it_list8 ->double_number <<" ";
+        ++it_list8;
+    }
+    
 
+    propert_consistent_container consistent1;
+
+    for(size_t index = 0; index < 10;index++)
+    {
+        consistent1.push_back(index);
+    }
+    for(size_t index =0; index < consistent1.getsize(); index++)
+    {
+        std::cout << consistent1[index].double_number << " ";
+    }
+    consistent1.erase(2);
+    consistent1.erase(4);
+    consistent1.erase(6);
+    
+    
     return 0;
+
 }

@@ -19,6 +19,12 @@ add_executable(
                newcontainer.h
 
                containers.h
+
+               consistent_container.h
+               consistent_container.cpp
+
+               list_type_container.h
+               list_type_container.cpp
                
                )
 

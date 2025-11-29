@@ -20,7 +20,7 @@ struct MLLE
     int integer_number;
     double integer_number_fractional_part;
 
-    std::string integerHEX;
+    std::string integerHEX; // == 
     std::string doubleHEX;
     std::string integerBIN;
     std::string doubleBIN;
