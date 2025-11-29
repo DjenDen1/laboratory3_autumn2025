@@ -106,7 +106,6 @@ public:
     list_type_iterator begin() { return list_type_iterator(head); }
     list_type_iterator end() { return list_type_iterator(nullptr); }
 
-
     void push_back(double value)
     {
         LE* node = new LE(value);
