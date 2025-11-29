@@ -52,49 +52,49 @@ build cmake_object_order_depends_target_laboratory3: phony || .
 build CMakeFiles/laboratory3.dir/main.cpp.obj: CXX_COMPILER__laboratory3_unscanned_Debug C$:/CPP2025/lab3/main.cpp || cmake_object_order_depends_target_laboratory3
   CONFIG = Debug
   DEP_FILE = CMakeFiles\laboratory3.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles\laboratory3.dir
   OBJECT_FILE_DIR = CMakeFiles\laboratory3.dir
 
 build CMakeFiles/laboratory3.dir/voidprint.cpp.obj: CXX_COMPILER__laboratory3_unscanned_Debug C$:/CPP2025/lab3/voidprint.cpp || cmake_object_order_depends_target_laboratory3
   CONFIG = Debug
   DEP_FILE = CMakeFiles\laboratory3.dir\voidprint.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles\laboratory3.dir
   OBJECT_FILE_DIR = CMakeFiles\laboratory3.dir
 
 build CMakeFiles/laboratory3.dir/elementdoublelinkedlist.cpp.obj: CXX_COMPILER__laboratory3_unscanned_Debug C$:/CPP2025/lab3/elementdoublelinkedlist.cpp || cmake_object_order_depends_target_laboratory3
   CONFIG = Debug
   DEP_FILE = CMakeFiles\laboratory3.dir\elementdoublelinkedlist.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles\laboratory3.dir
   OBJECT_FILE_DIR = CMakeFiles\laboratory3.dir
 
 build CMakeFiles/laboratory3.dir/elementmonolinkedlist.cpp.obj: CXX_COMPILER__laboratory3_unscanned_Debug C$:/CPP2025/lab3/elementmonolinkedlist.cpp || cmake_object_order_depends_target_laboratory3
   CONFIG = Debug
   DEP_FILE = CMakeFiles\laboratory3.dir\elementmonolinkedlist.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles\laboratory3.dir
   OBJECT_FILE_DIR = CMakeFiles\laboratory3.dir
 
 build CMakeFiles/laboratory3.dir/functions.cpp.obj: CXX_COMPILER__laboratory3_unscanned_Debug C$:/CPP2025/lab3/functions.cpp || cmake_object_order_depends_target_laboratory3
   CONFIG = Debug
   DEP_FILE = CMakeFiles\laboratory3.dir\functions.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles\laboratory3.dir
   OBJECT_FILE_DIR = CMakeFiles\laboratory3.dir
 
 build CMakeFiles/laboratory3.dir/consistent_container.cpp.obj: CXX_COMPILER__laboratory3_unscanned_Debug C$:/CPP2025/lab3/consistent_container.cpp || cmake_object_order_depends_target_laboratory3
   CONFIG = Debug
   DEP_FILE = CMakeFiles\laboratory3.dir\consistent_container.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles\laboratory3.dir
   OBJECT_FILE_DIR = CMakeFiles\laboratory3.dir
 
 build CMakeFiles/laboratory3.dir/list_type_container.cpp.obj: CXX_COMPILER__laboratory3_unscanned_Debug C$:/CPP2025/lab3/list_type_container.cpp || cmake_object_order_depends_target_laboratory3
   CONFIG = Debug
   DEP_FILE = CMakeFiles\laboratory3.dir\list_type_container.cpp.obj.d
-  FLAGS = -g -std=gnu++14
+  FLAGS = -g -std=gnu++17
   OBJECT_DIR = CMakeFiles\laboratory3.dir
   OBJECT_FILE_DIR = CMakeFiles\laboratory3.dir
 

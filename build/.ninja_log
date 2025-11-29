@@ -1,9 +1,9 @@
 # ninja log v7
-30	942	7860922409956401	CMakeFiles/laboratory3.dir/main.cpp.obj	81253903a29c3f82
-942	1411	7860922419074058	laboratory3.exe	906758bcf2f1eba7
-34	391	7860922410005705	CMakeFiles/laboratory3.dir/voidprint.cpp.obj	c7449407dab0b71a
-38	532	7860922410025254	CMakeFiles/laboratory3.dir/elementdoublelinkedlist.cpp.obj	4c731e71134d1762
-46	564	7860922410087361	CMakeFiles/laboratory3.dir/functions.cpp.obj	9c375bb29835438c
-43	484	7860922410087361	CMakeFiles/laboratory3.dir/elementmonolinkedlist.cpp.obj	5fb97ad78d2f88a1
-49	478	7860922410151937	CMakeFiles/laboratory3.dir/consistent_container.cpp.obj	dac6be517421d271
-53	533	7860922410192015	CMakeFiles/laboratory3.dir/list_type_container.cpp.obj	3fc554ee4ba09bd6
+29	980	7860925290918449	CMakeFiles/laboratory3.dir/main.cpp.obj	a60256f1ca5c3ed5
+980	1110	7860925300382907	laboratory3.exe	906758bcf2f1eba7
+38	365	7860925291014315	CMakeFiles/laboratory3.dir/voidprint.cpp.obj	3222dd1275d4e258
+43	540	7860925291055347	CMakeFiles/laboratory3.dir/elementdoublelinkedlist.cpp.obj	f9b69cfe638a796a
+50	650	7860925291135333	CMakeFiles/laboratory3.dir/functions.cpp.obj	3b7b4e6c9123e7d6
+47	588	7860925291105317	CMakeFiles/laboratory3.dir/elementmonolinkedlist.cpp.obj	1938df7fc3bdb92c
+57	594	7860925291203347	CMakeFiles/laboratory3.dir/consistent_container.cpp.obj	975f769858be5b2a
+61	567	7860925291243849	CMakeFiles/laboratory3.dir/list_type_container.cpp.obj	865547dc2a4f377b
