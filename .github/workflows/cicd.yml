@@ -57,7 +57,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: linux-build
-          path: build/laboratory3  # Укажите правильный путь к бинарнику
+          path: build/laboratory3  
 
   create-release:
     needs: [build-windows, build-linux]
