@@ -1,6 +1,7 @@
 #include "consistent_container.h"
 #include <type_traits>
-
+#include <string>
+#include <sstream>
 std::string transfor_HEX_CE(int number)
 {
   

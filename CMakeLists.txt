@@ -32,9 +32,3 @@ add_executable(
                
                )
 
-# Для MSVC добавьте специфичные настройки
-if(MSVC)
-    add_compile_options(/W4)  # Включить предупреждения
-    # Отключите конкретные предупреждения если нужно
-    add_compile_options(/wd4244)  # Отключить warning C4244
-endif()

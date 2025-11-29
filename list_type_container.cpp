@@ -1,6 +1,7 @@
 #include "list_type_container.h"
 #include <type_traits>
-
+#include <string>
+#include <sstream>
 std::string transfor_HEX_LE(int number)
 {
   
