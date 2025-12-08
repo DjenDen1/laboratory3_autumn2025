@@ -40,5 +40,11 @@
   "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++17 -o CMakeFiles\\laboratory3.dir\\list_type_container.cpp.obj -c C:\\CPP2025\\lab3\\list_type_container.cpp",
   "file": "C:/CPP2025/lab3/list_type_container.cpp",
   "output": "C:/CPP2025/lab3/build/CMakeFiles/laboratory3.dir/list_type_container.cpp.obj"
+},
+{
+  "directory": "C:/CPP2025/lab3/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -g -std=gnu++17 -o CMakeFiles\\laboratory3.dir\\mono_linked_list_type_container.cpp.obj -c C:\\CPP2025\\lab3\\mono_linked_list_type_container.cpp",
+  "file": "C:/CPP2025/lab3/mono_linked_list_type_container.cpp",
+  "output": "C:/CPP2025/lab3/build/CMakeFiles/laboratory3.dir/mono_linked_list_type_container.cpp.obj"
 }
 ]

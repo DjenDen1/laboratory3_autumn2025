@@ -7,6 +7,7 @@
 
 #include "list_type_container.h"
 #include "consistent_container.h"
+#include "mono_linked_list_type_container.h"
 
 #include <cstdlib>
 #include <list>
@@ -119,6 +120,68 @@ while(it_mono != mono_linked_list.end())
 
 int main()
 {
+    mono_propert_list_type_container list3;
+    std::cout<< "mono_ptopert_list_type_container list3;" << std::endl;
+    for(size_t index = 0; index < 10; index++)
+    {
+        list3.push_back(index);
+    }
+    mono_propert_list_type_container::list_type_iterator it_list1_1 = list3.begin();
+    while(it_list1_1 !=list3.end())
+    {
+        std::cout <<it_list1_1->double_number << " ";
+        ++it_list1_1;
+    }
+    std::cout<<std::endl;
+    
+    mono_propert_list_type_container::list_type_iterator it_list2_1 = list3.begin();
+    std::cout << std::endl;
+    list3.erase(2);
+    list3.erase(4);
+    list3.erase(6);
+    while(it_list2_1 != list3.end())
+    {
+        std::cout<<it_list2_1->double_number<< " ";
+        ++it_list2_1;
+    }
+    std::cout<< std::endl;
+
+    mono_propert_list_type_container::list_type_iterator it_list3_1_begin = list3.begin();
+    list3.insert(it_list3_1_begin,10);
+    mono_propert_list_type_container::list_type_iterator it_list3_1 = list3.begin();
+    while(it_list3_1 != list3.end())
+    {
+        std::cout << it_list3_1->double_number << " ";
+        ++it_list3_1;
+    }
+    std::cout << std::endl;
+
+
+    mono_propert_list_type_container::list_type_iterator it_list4_1 = list3.begin();
+    size_t mid_index = list3.size()/2;
+    for(size_t index = 0; index < mid_index; index++) ++it_list4_1;
+    list3.insert(it_list4_1,20);
+    mono_propert_list_type_container::list_type_iterator it_list5_1 = list3.begin();
+    while(it_list5_1 != list3.end())
+    {
+        std::cout << it_list5_1->double_number << " ";
+        ++it_list5_1;
+    }
+    std::cout<< std::endl;
+
+    mono_propert_list_type_container::list_type_iterator it_list6_1 = list3.end();
+    list3.insert(it_list6_1,30);
+    mono_propert_list_type_container::list_type_iterator it_list7_1 =list3.begin();
+    while(it_list7_1 != list3.end())
+    {
+        std::cout<<it_list7_1->double_number <<" ";
+        ++it_list7_1;
+    }
+    std::cout << std::endl;
+
+
+    //======================================================================
+
     propert_list_type_container list1;
     std::cout << "propert_list_type_container list1;" << std::endl;
     for(size_t index=0; index < 10; index++)
@@ -155,8 +218,8 @@ int main()
 
 
     propert_list_type_container::list_type_iterator it_list5 = list1.begin();
-    size_t mid_index = list1.size()/2;
-    for(size_t index = 0; index < mid_index; index++) ++it_list5;
+    size_t mid_index1 = list1.size()/2;
+    for(size_t index = 0; index < mid_index1; index++) ++it_list5;
     list1.insert(it_list5,20);
 
     std::cout << std::endl;
@@ -181,6 +244,10 @@ int main()
     }
     std::cout << std::endl;
     
+
+//=======================================================================================
+
+
     std::cout << "propert_consistent_container consistent1;" << std::endl;
 
     propert_consistent_container consistent1;
